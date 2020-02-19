@@ -1,0 +1,625 @@
+<html>
+  <head>
+    <title>Hab perception</title>
+	<style>
+#header {
+  text-align: center;
+}
+
+#main_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 800px 200px;
+  border: 7px solid rgba(8,8,8,0.33);
+}
+
+.inner_box {
+  display: grid;
+  border: 5px solid rgba(8,8,8,0.33);
+  border-radius: 10px;
+  border-collapse: collapse;
+  overflow: scroll; 
+}
+
+#input_form_div {
+  display: grid;
+  grid-template-raws: repeat(6, 1fr); 
+  grid-row-gap: 1px;
+  border: 2px dotted black;
+  margin: 15px;
+}
+
+.radio_raw {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-left: 35px;
+  margin-top: 5px;
+  padding-bottom: 10px; 
+
+}
+h4,h3,h2, h1 {
+  text-align: center;
+}
+.button_div {
+  padding-bottom: 15px;
+  text-align: center;
+}
+#set_symbol {
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.control_button {
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#cleardata {
+  width: 500px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.radio_button {
+  width: 30px;
+  height: 50px;
+    color: red;
+    background: black;
+    padding: 1em;
+}
+.radio_button::-ms-check {
+    color: red;
+    background: black;
+    padding: 1em;
+}
+
+.y_input {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  text-align: center;
+}
+
+#significant_inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-row-gap: 10px;
+  text-align: center;
+}
+.m_neyron {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-row-gap: 10px;
+  border: 2px dashed black;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.item {
+  padding: 10px;
+  margin: 1px;
+  grid-column: 1 / span 5;
+  font-weight: bold;
+  font-size: 24px;
+}
+.m_radio_button:checked
+{
+     background-color: blue;
+     width: 20px;
+     height: 20px;
+     margin: 1px;
+}
+	</style>
+  </head>
+  <body>
+    
+    <div id="header">
+      <h1>HAB PROCESSING PAGE</h1>
+    </div>
+    <div id="main_body">
+     <div class="inner_box">
+     <form id="input-form">
+       <h1>Input teaching form</h1>
+       <div id="input_form_div">
+        <h3>Insert symbol</h3>
+        <div class="radio_raw">
+          <input class="radio_button" id="b1" type="radio"/>
+          <input class="radio_button" id="b2" type="radio"/>
+          <input class="radio_button" id="b3" type="radio"/>
+          <input class="radio_button" id="b4" type="radio"/>
+          <input class="radio_button" id="b5" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="b6" type="radio"/>
+          <input class="radio_button" id="b7" type="radio"/>
+          <input class="radio_button" id="b8" type="radio"/>
+          <input class="radio_button" id="b9" type="radio"/>
+          <input class="radio_button" id="b10" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="b11" type="radio"/>
+          <input class="radio_button" id="b12" type="radio"/>
+          <input class="radio_button" id="b13" type="radio"/>
+          <input class="radio_button" id="b14" type="radio"/>
+          <input class="radio_button" id="b15" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="b16" type="radio"/>
+          <input class="radio_button" id="b17" type="radio"/>
+          <input class="radio_button" id="b18" type="radio"/>
+          <input class="radio_button" id="b19" type="radio"/>
+          <input class="radio_button" id="b20" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="b21" type="radio"/>
+          <input class="radio_button" id="b22" type="radio"/>
+          <input class="radio_button" id="b23" type="radio"/>
+          <input class="radio_button" id="b24" type="radio"/>
+          <input class="radio_button" id="b25" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="b26" type="radio"/>
+          <input class="radio_button" id="b27" type="radio"/>
+          <input class="radio_button" id="b28" type="radio"/>
+          <input class="radio_button" id="b29" type="radio"/>
+          <input class="radio_button" id="b30" type="radio"/>
+        </div>
+        <h3>Insert Y perception</h3>
+         <div class="y_input">
+          <input class="radio_button" id="y1" type="radio"/>
+          <input class="radio_button" id="y2" type="radio"/>
+          <input class="radio_button" id="y3" type="radio"/>
+          <input class="radio_button" id="y4" type="radio"/>
+          <input class="radio_button" id="y5" type="radio"/>
+           <input class="radio_button" id="y6" type="radio"/>
+           <input class="radio_button" id="y7" type="radio"/>
+           <input class="radio_button" id="y8" type="radio"/>
+           <input class="radio_button" id="y9" type="radio"/>
+           <input class="radio_button" id="y10" type="radio"/>
+        </div>
+        <div class="button_div">
+        <input type="button" onclick="initializeSymbols()"
+               value="set symbol" id="set_symbol"/>
+       </div>
+       </div>
+     
+       <div class="button_div">
+        <input type="reset" value="Reset input" class="control_button">
+        <input type="button" value="process data" class="control_button" onclick="process_data()">
+       </div>
+       <div class="button_div">
+        <input type="button" onclick="clear_data()"
+               value="clear data" id="cleardata"/>
+       </div>
+     </form>
+     </div>
+     <div class="inner_box" id="output_window">
+      <form id="input-form">
+       <h1>Input checking form</h1>
+       <div id="input_form_div">
+        <h3>Insert symbol</h3>
+        <div class="radio_raw">
+          <input class="radio_button" id="c1" type="radio"/>
+          <input class="radio_button" id="c2" type="radio"/>
+          <input class="radio_button" id="c3" type="radio"/>
+          <input class="radio_button" id="c4" type="radio"/>
+          <input class="radio_button" id="c5" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="c6" type="radio"/>
+          <input class="radio_button" id="c7" type="radio"/>
+          <input class="radio_button" id="c8" type="radio"/>
+          <input class="radio_button" id="c9" type="radio"/>
+          <input class="radio_button" id="c10" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="c11" type="radio"/>
+          <input class="radio_button" id="c12" type="radio"/>
+          <input class="radio_button" id="c13" type="radio"/>
+          <input class="radio_button" id="c14" type="radio"/>
+          <input class="radio_button" id="c15" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="c16" type="radio"/>
+          <input class="radio_button" id="c17" type="radio"/>
+          <input class="radio_button" id="c18" type="radio"/>
+          <input class="radio_button" id="c19" type="radio"/>
+          <input class="radio_button" id="c20" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="c21" type="radio"/>
+          <input class="radio_button" id="c22" type="radio"/>
+          <input class="radio_button" id="c23" type="radio"/>
+          <input class="radio_button" id="c24" type="radio"/>
+          <input class="radio_button" id="c25" type="radio"/>
+        </div>
+        <div class="radio_raw">
+          <input class="radio_button" id="c26" type="radio"/>
+          <input class="radio_button" id="c27" type="radio"/>
+          <input class="radio_button" id="c28" type="radio"/>
+          <input class="radio_button" id="c29" type="radio"/>
+          <input class="radio_button" id="c30" type="radio"/>
+        </div>
+         <div class="button_div">
+        <input type="button" onclick="acceptSymbol()"
+               value="set symbol" id="set_symbol"/>
+       </div>
+        <h3>Output Y perception</h3>
+         <div class="y_input">
+          <input class="radio_button" id="cy1" type="radio"/>
+          <input class="radio_button" id="cy2" type="radio"/>
+          <input class="radio_button" id="cy3" type="radio"/>
+          <input class="radio_button" id="cy4" type="radio"/>
+          <input class="radio_button" id="cy5" type="radio"/>
+           <input class="radio_button" id="cy6" type="radio"/>
+           <input class="radio_button" id="cy7" type="radio"/>
+           <input class="radio_button" id="cy8" type="radio"/>
+           <input class="radio_button" id="cy9" type="radio"/>
+           <input class="radio_button" id="cy10" type="radio"/>
+        </div>
+        
+       </div>
+     
+       <div class="button_div">
+        <input type="reset" value="Reset input" class="control_button">
+        <input type="button" value="perceive symbol" class="control_button" onclick="perceiveAcceptedSymbol()">
+       </div>
+     </form>  
+     </div>
+     <div class="inner_box">
+        <div id ="significant_inputs">
+          <div class="m_neyron" id="template_neyron" style="display:none;">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+            <input type="radio" class="m_radio_button">
+           
+          </div>
+          
+       </div>
+     </div>
+     <div class="inner_box">
+       <h3>Processing window for teaching form</h3>
+       <p id="p_inner_box_4"></p>  
+     </div>
+     <div class="inner_box">
+        <h3>Processing window for checking form</h3>
+        <p id="p_inner_box_5"></p>
+     </div>
+      <div class="inner_box">
+        <h2>The matched symbol</h2>
+          <div class="m_neyron" id="show_symbol">
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+            <input type="radio" class="m_radio_button" disabled>
+          </div>
+      </div>
+    </div>
+<script>
+var x_num = 31;
+var y_num = 10;
+var symbols_global = [];
+var neyrons_global = [];
+var flags_for_all_neyrons = [];
+var symbol_number = 0;
+var symbols_checking_sum = [];
+var accepted_symbol = new Object();
+ 
+class Symbol {
+  constructor(id=-1) {
+    this.X_inputs = new Array(x_num).fill(-1);
+    this.id = id;
+    this.checkingSums = [];
+  }
+  getId() {
+    return this.id;
+  }
+  getCheckingSums() {
+    return this.checkingSums;
+  }
+  pushCheckingSum(neyron_id, sum) {
+    this.checkingSums[neyron_id] = sum;
+  }
+  setYinputs(Y_inputs) {
+    this.Y_inputs = Y_inputs;
+  }
+  getYinputs() {
+    return this.Y_inputs;
+  }
+  X_input(index) {
+    return this.X_inputs[index];
+  }
+  Y_input(index) {
+    return this.Y_inputs[index];
+  }
+  fillXinputs(prefix="b") { 
+    this.X_inputs[0] = 1;
+      for (let i = 1; i < this.X_inputs.length; i++) {
+        let radio_button = document.getElementById(prefix+i).checked;
+        if (radio_button == 1) {
+           this.X_inputs[i] = 1;
+        } 
+      } 
+  }
+  fillYinputs() { 
+    this.setYinputs(new Array(y_num).fill(-1));
+     for (let i = 0; i < this.Y_inputs.length; i++) {
+        let radio_button = document.getElementById("y"+(i+1)).checked;
+        if (radio_button == 1) {
+           this.Y_inputs[i] = 1;
+        } 
+      } 
+  }
+  toString() {
+    let raw = ""; 
+    for (let i = 0; i < this.X_inputs.length; i++) {
+     raw += this.X_inputs[i] + " ";
+    }
+    return raw;
+  }
+}
+class Neyron {
+  constructor(id) {
+    this.id= id;
+    this.W_inputs = new Array(x_num).fill(0);
+    this.W_flags = new Array(x_num).fill(false); //to use in significant inputs
+  }
+  setSymbols(symbols) {
+    this.symbols = symbols;
+  }
+   countWeight() {
+    for (let s = 0; s < this.symbols.length; s++) {
+      let symbol = this.symbols[s];
+      for (let i = 0; i < this.W_inputs.length; i++) {
+        this.W_inputs[i] += symbol.X_input(i) * symbol.Y_input(this.id); 
+        if (symbol.X_input(i) === 1 && this.W_flags[i] === false) {
+          this.W_flags[i] = true;
+        }
+      }
+    }
+  }
+  checkWeigh(symbol) {
+    let weighs = this.W_inputs;
+    let S = weighs[0];
+    for (let w = 0; w < weighs.length; w++) {
+      S += weighs[w] * symbol.X_input(w);
+    }
+    symbol.pushCheckingSum(this.id, S);
+    if (S > 0) {
+      S = 1;
+    } else {
+      S = -1;
+    }
+  
+    return S === symbol.Y_input(this.id);
+  }
+  checkWeighs() {
+    let symbols = this.symbols;
+    let flags = [];
+    for (let s = 0; s < symbols.length; s++) {
+       flags.push(this.checkWeigh(symbols[s]));
+    }
+    return flags;
+  }
+  testAcceptedWeigh(symbol=accepted_symbol) {
+    let weighs = this.W_inputs;
+    let S = weighs[0];
+    for (let w = 0; w < weighs.length; w++) {
+      S += weighs[w] * symbol.X_input(w);
+    }
+    symbol.pushCheckingSum(this.id, S);
+  }
+  renderMainInputs() {
+      let weighs = this.W_inputs;
+      let neyron = document.getElementById("template_neyron").cloneNode(true);
+      let p = document.createElement("p");
+      p.innerHTML = "Significant inputs for Neyron_" + (this.id + 1);
+      p.className = "item";
+      let inputs = neyron.children;
+      for (let w = 1; w < weighs.length; w++) {
+        if (weighs[w] != 0 && this.W_flags[w] === true) {
+          inputs[w-1].checked = true;
+        }
+        inputs[w-1].disabled = true;
+      }
+      neyron.appendChild(p);
+      neyron.style.display = 'grid';
+      document.getElementById("significant_inputs").appendChild(neyron);
+  }
+  toString() {
+    let raw = ""; 
+    for (let i = 0; i < this.W_inputs.length; i++) {
+     raw += this.W_inputs[i] + " ";
+    }
+    return raw;
+  }
+}
+function initializeNeyrons() {
+  for (let i=0; i < symbols_global.length; i++) {
+    let new_neyron = new Neyron(i);
+    new_neyron.setSymbols(symbols_global);
+    neyrons_global.push(new_neyron);
+  }
+}
+function initializeSymbols() {
+ if (symbols_global.length == y_num) {
+   alert("You aren't allowed to add more than 10 symbols.");
+ } 
+  let new_symbol = new Symbol(symbol_number);
+  symbol_number += 1;
+  symbols_checking_sum.push(new_symbol.getCheckingSums())
+  new_symbol.fillXinputs();
+  new_symbol.fillYinputs();
+  symbols_global.push(new_symbol);
+  if (symbols_global.length < 10) {
+    let can_add_symbol = 10 - symbols_global.length;
+    alert("You are allowed to add " + can_add_symbol + " symbols else.");
+  } 
+  document.getElementById("p_inner_box_4").innerHTML += "<h5>X inputs:</h5>"; 
+  printGlobalArray (symbols_global);
+}
+function printGlobalArray (array) {
+ let text = "<ul>\n";
+  for (let ii=0; ii<array.length; ii++) {
+    text += "<li>" + array[ii].toString() + "</li>\n";
+  }
+  text += "</ul>";
+  text += "***************";
+  document.getElementById("p_inner_box_4").innerHTML += text;
+}
+
+function countWeighs() {
+  let neyrons = neyrons_global;
+  for (let i = 0; i < neyrons.length; i++) {
+    neyrons[i].countWeight();
+    neyrons[i].renderMainInputs();
+  }
+}
+
+function checkWeighs() {
+  let neyrons = neyrons_global;
+  let flagsForAllNeyrons = [];
+  for (let i = 0; i < neyrons.length; i++) {
+    flagsForAllNeyrons.push(neyrons[i].checkWeighs());
+  }
+  return flagsForAllNeyrons;
+}
+
+
+function process_data() {
+  initializeNeyrons();
+  countWeighs();
+   document.getElementById("p_inner_box_4").innerHTML += "<h4>Counted weights:</h4>";
+  printGlobalArray (neyrons_global); 
+  flags_for_all_neyrons = checkWeighs();
+  document.getElementById("p_inner_box_4").innerHTML += "<h4>Flags</h4>";
+  printGlobalArray (flags_for_all_neyrons);  
+  document.getElementById("p_inner_box_4").innerHTML += "<h4>Sums</h4>";
+  printGlobalArray(symbols_checking_sum);  
+} 
+
+function clear_data() {
+  symbols_global = [];
+  neyrons_global = [];
+  flags_for_all_neyrons = [];
+  symbol_number = 0;
+  symbols_checking_sum = [];
+  
+   let template = document.getElementById("template_neyron").cloneNode(true); 
+    document.getElementById("significant_inputs").innerHTML = "";
+    document.getElementById("significant_inputs").appendChild(template);
+   document.getElementById("p_inner_box_4").innerHTML += "<h4>all table has been cleared</h4>";
+}
+// perception block
+function acceptSymbol() { 
+  let new_symbol = new Symbol();
+  symbols_checking_sum.push(new_symbol.getCheckingSums())
+  new_symbol.fillXinputs("c");
+  accepted_symbol = new_symbol;
+   document.getElementById("p_inner_box_5").innerHTML += "<h4>Accepted symbol</h4>";
+  document.getElementById("p_inner_box_5").innerHTML += accepted_symbol.toString();
+}
+function compareAcceptedWithTaughtSymbols() {
+  let sums = symbols_checking_sum;
+  let a_sum = accepted_symbol.getCheckingSums();
+  for (let s = 0; s < sums.length; s++) {
+    let sum = sums[s];
+    let flag = true;
+    for (let y=0; y<sum.length; y++) {
+      flag = flag && (sum[y] === a_sum[y]);
+    }
+    if (flag) {
+      return symbols_global[s];
+    }
+  } 
+  return false;
+}
+function showAcceptedSymbolYs() {
+  let Ys_of_a_s = accepted_symbol.getYinputs();
+  for (let y = 0; y < Ys_of_a_s.length; y++) {
+    document.getElementById("cy"+(y+1)).checked = false;
+    if(Ys_of_a_s[y] > 0) {
+        document.getElementById("cy"+(y+1)).checked = true;
+    }
+  }
+}
+function perceiveAcceptedSymbol() {
+  for (let n = 0; n < neyrons_global.length; n++) {
+      neyrons_global[n].testAcceptedWeigh();  
+  }  
+  let is_found_symbol = compareAcceptedWithTaughtSymbols();
+  if (is_found_symbol) {
+    accepted_symbol.setYinputs(is_found_symbol.getYinputs());
+    showAcceptedSymbolYs();
+     showMatchedSymbol(is_found_symbol);
+  }
+
+}
+function showMatchedSymbol(matched_symbol) {
+   let inputs = document.getElementById("show_symbol").children;
+   for (let i = 0; i < inputs.length; i++) {
+     inputs[i].checked = false;
+     if ( matched_symbol.X_input(i+1) === 1) {
+       inputs[i].checked = true;
+     }
+   }
+}
+</script>
+  </body>
+</html>
